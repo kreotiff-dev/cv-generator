@@ -1,0 +1,162 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: left;
+    color: #444;
+    margin-bottom: 1.5em;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+form {
+    background: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 1.5em;
+    padding: 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #007bff;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: calc(100% - 1em);
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button[type="button"],
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 0.7em 1.2em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1em;
+}
+
+button[type="button"]:hover,
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="button"] {
+    display: block;
+    margin-top: 1em;
+}
+
+.skill, .experience, .education, .reference {
+    margin-bottom: 1.5em;
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.skill .move-buttons,
+.experience .move-buttons,
+.education .move-buttons,
+.reference .move-buttons {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+button.move-up,
+button.move-down {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 0.3em 0.6em;
+    cursor: pointer;
+    margin-left: 0.5em;
+    transition: background-color 0.3s;
+}
+
+button.move-up:hover,
+button.move-down:hover {
+    background-color: #aaa;
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 1.5em;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        width: calc(100% - 0.5em);
+    }
+
+    button[type="button"],
+    button[type="submit"] {
+        width: 100%;
+    }
+}
+
+.compact-input {
+    width: 100%;
+    padding: 0.4em;
+    margin-bottom: 0.8em;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.compact-textarea {
+    width: 100%;
+    padding: 0.4em;
+    margin-bottom: 0.8em;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}

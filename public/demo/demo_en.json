@@ -1,0 +1,68 @@
+{
+    "name": "Ivan Ivanov",
+    "position": "Senior Developer",
+    "age": 35,
+    "email": "ivan.ivanov@example.com",
+    "phone": "+7-900-123-45-67",
+    "location": "Russia, Moscow",
+    "about": "Hello! I am a developer with over 8 years of experience in creating web and mobile applications. I have deep knowledge of frontend and backend development, strive to write high-quality code, and grow in the IT field.",
+    "skills": [
+        { "name": "JavaScript", "level": 90 },
+        { "name": "Node.js", "level": 80 },
+        { "name": "React", "level": 85 },
+        { "name": "HTML/CSS", "level": 95 }
+    ],
+    "experience": [
+        { 
+            "date": "January 2021 - Present", 
+            "company": "Tech Solutions", 
+            "position": "Senior Developer", 
+            "projects": "Project management system for large corporations",
+            "techStack": "Node.js, React, MongoDB, Docker, Kubernetes",
+            "description": [
+                "Developing and maintaining web applications for the company's clients;",
+                "Creating RESTful APIs using Node.js;",
+                "Leading a team of 5 developers and assisting in solving complex technical challenges;",
+                "Optimizing existing code to improve performance."
+            ]
+        },
+        { 
+            "date": "May 2017 - December 2020", 
+            "company": "WebWorks", 
+            "position": "Frontend Developer", 
+            "description": [
+                "Developing user interfaces for web applications using React and Redux;",
+                "Implementing modern practices and improving UX;",
+                "Working closely with designers and managers to meet user requirements."
+            ]
+        }
+    ],
+    "education": [
+        { "date": "2010 - 2015", "degree": "Bachelor's Degree", "field": "Information Technology", "institution": "Moscow State Technical University" }
+    ],
+    "references": [
+        { "name": "Anna Smirnova", "position": "Project Manager", "text": "Ivan is a top-class specialist, always responsible with tasks and able to work in a team.", "image": "images/reference-image-1.jpg" }
+    ],
+    "socialLinks": {
+        "telegram": "https://t.me/ivan_developer",
+        "linkedin": "https://linkedin.com/in/ivan-ivanov"
+    },
+    "sections": {
+        "about": "About Me",
+        "basicInformation": "Basic Information",
+        "skills": "Professional Skills",
+        "experience": "Work Experience",
+        "education": "Education",
+        "references": "References",
+        "contact": "Contact Me"
+    },
+    "menuItems": {
+        "aboutTitle": "About Me",
+        "skillsTitle": "Skills",
+        "portfolioTitle": "Portfolio",
+        "experienceTitle": "Experience",
+        "educationTitle": "Education",
+        "referencesTitle": "References",
+        "contactTitle": "Contact"
+    }
+}

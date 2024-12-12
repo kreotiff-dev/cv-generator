@@ -1,0 +1,68 @@
+{
+    "name": "Иван Иванов",
+    "position": "Senior Developer",
+    "age": 35,
+    "email": "ivan.ivanov@example.com",
+    "phone": "+7-900-123-45-67",
+    "location": "Россия, Москва",
+    "about": "Привет! Я разработчик с более чем 8-летним опытом в создании веб и мобильных приложений. Обладаю глубокими знаниями в области фронтенда и бэкенда, стремлюсь создавать качественный код и развиваться в IT-сфере.",
+    "skills": [
+        { "name": "JavaScript", "level": 90 },
+        { "name": "Node.js", "level": 80 },
+        { "name": "React", "level": 85 },
+        { "name": "HTML/CSS", "level": 95 }
+    ],
+    "experience": [
+        { 
+            "date": "Январь 2021 - настоящее время", 
+            "company": "Tech Solutions",
+            "position": "Senior Developer",
+            "projects": "Система управления проектами для крупных корпораций",
+            "techStack": "Node.js, React, MongoDB, Docker, Kubernetes",
+            "description": [
+                "Разработка и поддержка веб-приложений для клиентов компании;",
+                "Создание RESTful API с использованием Node.js;",
+                "Руководство командой из 5 разработчиков и помощь в решении сложных технических задач;",
+                "Оптимизация существующего кода для улучшения производительности."
+            ]
+        },
+        { 
+            "date": "Май 2017 - Декабрь 2020", 
+            "company": "WebWorks", 
+            "position": "Frontend Developer", 
+            "description": [
+                "Разработка пользовательского интерфейса для веб-приложений с использованием React и Redux;",
+                "Внедрение современных практик и улучшение UX;",
+                "Тесное сотрудничество с дизайнерами и менеджерами для реализации требований пользователей."
+            ]
+        }
+    ],
+    "education": [
+        { "date": "2010 - 2015", "degree": "Высшее образование", "field": "Информационные технологии", "institution": "Московский Государственный Технический Университет" }
+    ],
+    "references": [
+        { "name": "Анна Смирнова", "position": "Руководитель проекта", "text": "Иван — высококлассный специалист, всегда ответственно подходит к задачам и умеет работать в команде.", "image": "/frontend/assets/images/reference-image-1.jpg" }
+    ],
+    "socialLinks": {
+        "telegram": "https://t.me/ivan_developer",
+        "linkedin": "https://linkedin.com/in/ivan-ivanov"
+    },
+    "sections": {
+        "about": "Обо мне",
+        "basicInformation": "Основная информация",
+        "skills": "Профессиональные навыки",
+        "experience": "Опыт работы",
+        "education": "Образование",
+        "references": "Рекомендации",
+        "contact": "Связаться со мной"
+    },
+    "menuItems": {
+        "aboutTitle": "Обо мне",
+        "skillsTitle": "Навыки",
+        "portfolioTitle": "Портфолио",
+        "experienceTitle": "Опыт",
+        "educationTitle": "Образование",
+        "referencesTitle": "Рекомендации",
+        "contactTitle": "Контакты"
+    }
+}

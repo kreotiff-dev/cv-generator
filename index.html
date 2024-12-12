@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма для создания резюме</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script defer src="script.js"></script> -->
+</head>
+<body>
+    <h1>Создайте своё резюме</h1>
+    <button type="button" onclick="switchLanguage('ru')">Русская версия</button>
+    <button type="button" onclick="switchLanguage('en')">Английская версия</button>
+    
+    <form id="resumeForm" style="max-width: 600px; margin: auto;">
+        <fieldset class="lang-form" id="ruForm">
+            <legend>Основная информация (RU)</legend>
+            <label for="name_ru">Имя:</label>
+            <input type="text" id="name_ru" name="name_ru" class="compact-input"><br>
+    
+            <label for="position_ru">Должность:</label>
+            <input type="text" id="position_ru" name="position_ru" class="compact-input"><br>
+    
+            <label for="age_ru">Возраст:</label>
+            <input type="number" id="age_ru" name="age_ru" class="compact-input"><br>
+    
+            <label for="email_ru">Email:</label>
+            <input type="email" id="email_ru" name="email_ru" class="compact-input"><br>
+    
+            <label for="phone_ru">Телефон:</label>
+            <input type="tel" id="phone_ru" name="phone_ru" class="compact-input"><br>
+    
+            <label for="location_ru">Местоположение:</label>
+            <input type="text" id="location_ru" name="location_ru" class="compact-input"><br>
+    
+            <label for="about_ru">Обо мне:</label>
+            <textarea id="about_ru" name="about_ru" class="compact-textarea"></textarea><br>
+        </fieldset>
+    
+        <fieldset class="lang-form" id="enForm" style="display: none;">
+            <legend>Main Information (EN)</legend>
+            <label for="name_en">Name:</label>
+            <input type="text" id="name_en" name="name_en" class="compact-input"><br>
+    
+            <label for="position_en">Position:</label>
+            <input type="text" id="position_en" name="position_en" class="compact-input"><br>
+    
+            <label for="age_en">Age:</label>
+            <input type="number" id="age_en" name="age_en" class="compact-input"><br>
+    
+            <label for="email_en">Email:</label>
+            <input type="email" id="email_en" name="email_en" class="compact-input"><br>
+    
+            <label for="phone_en">Phone:</label>
+            <input type="tel" id="phone_en" name="phone_en" class="compact-input"><br>
+    
+            <label for="location_en">Location:</label>
+            <input type="text" id="location_en" name="location_en" class="compact-input"><br>
+    
+            <label for="about_en">About Me:</label>
+            <textarea id="about_en" name="about_en" class="compact-textarea"></textarea><br>
+        </fieldset>
+    
+        <fieldset id="skillsSection" class="lang-form">
+            <legend>Профессиональные навыки (RU)</legend>
+            <div class="skill">
+                <label for="skillName_ru_0">Название навыка:</label>
+                <input type="text" id="skillName_ru_0" name="skills_ru[0][name]" class="compact-input">
+                <label for="skillLevel_ru_0">Уровень (0-100):</label>
+                <input type="number" id="skillLevel_ru_0" name="skills_ru[0][level]" class="compact-input">
+            </div>
+            <button type="button" onclick="addSkill('ru')">Добавить навык (RU)</button>
+        </fieldset>
+    
+        <fieldset id="skillsSectionEn" class="lang-form" style="display: none;">
+            <legend>Professional Skills (EN)</legend>
+            <div class="skill">
+                <label for="skillName_en_0">Skill Name:</label>
+                <input type="text" id="skillName_en_0" name="skills_en[0][name]" class="compact-input">
+                <label for="skillLevel_en_0">Level (0-100):</label>
+                <input type="number" id="skillLevel_en_0" name="skills_en[0][level]" class="compact-input">
+            </div>
+            <button type="button" onclick="addSkill('en')">Add Skill (EN)</button>
+        </fieldset>
+    
+        <fieldset id="experienceSection" class="lang-form">
+            <legend>Опыт работы (RU)</legend>
+            <div class="experience">
+                <label for="experienceDate_ru_0">Период:</label>
+                <input type="text" id="experienceDate_ru_0" name="experience_ru[0][date]" class="compact-input">
+                <label for="experienceCompany_ru_0">Компания:</label>
+                <input type="text" id="experienceCompany_ru_0" name="experience_ru[0][company]" class="compact-input">
+                <label for="experiencePosition_ru_0">Должность:</label>
+                <input type="text" id="experiencePosition_ru_0" name="experience_ru[0][position]" class="compact-input">
+                <label for="experienceDescription_ru_0">Описание:</label>
+                <textarea id="experienceDescription_ru_0" name="experience_ru[0][description]" class="compact-textarea"></textarea>
+            </div>
+            <button type="button" onclick="addExperience('ru')">Добавить опыт (RU)</button>
+        </fieldset>
+    
+        <fieldset id="experienceSectionEn" class="lang-form" style="display: none;">
+            <legend>Work Experience (EN)</legend>
+            <div class="experience">
+                <label for="experienceDate_en_0">Work Period:</label>
+                <input type="text" id="experienceDate_en_0" name="experience_en[0][date]" class="compact-input">
+                <label for="experienceCompany_en_0">Company:</label>
+                <input type="text" id="experienceCompany_en_0" name="experience_en[0][company]" class="compact-input">
+                <label for="experiencePosition_en_0">Position:</label>
+                <input type="text" id="experiencePosition_en_0" name="experience_en[0][position]" class="compact-input">
+                <label for="experienceDescription_en_0">Description:</label>
+                <textarea id="experienceDescription_en_0" name="experience_en[0][description]" class="compact-textarea"></textarea>
+            </div>
+            <button type="button" onclick="addExperience('en')">Add Experience (EN)</button>
+        </fieldset>
+    
+        <fieldset id="educationSection" class="lang-form">
+            <legend>Образование (RU)</legend>
+            <div class="education">
+                <label for="educationDate_ru_0">Период:</label>
+                <input type="text" id="educationDate_ru_0" name="education_ru[0][date]" class="compact-input">
+                <label for="educationDegree_ru_0">Степень:</label>
+                <input type="text" id="educationDegree_ru_0" name="education_ru[0][degree]" class="compact-input">
+                <label for="educationField_ru_0">Специальность:</label>
+                <input type="text" id="educationField_ru_0" name="education_ru[0][field]" class="compact-input">
+                <label for="educationInstitution_ru_0">Учебное заведение:</label>
+                <input type="text" id="educationInstitution_ru_0" name="education_ru[0][institution]" class="compact-input">
+            </div>
+            <button type="button" onclick="addEducation('ru')">Добавить образование (RU)</button>
+        </fieldset>
+    
+        <fieldset id="educationSectionEn" class="lang-form" style="display: none;">
+            <legend>Education (EN)</legend>
+            <div class="education">
+                <label for="educationDate_en_0">Education Period:</label>
+                <input type="text" id="educationDate_en_0" name="education_en[0][date]" class="compact-input">
+                <label for="educationDegree_en_0">Degree:</label>
+                <input type="text" id="educationDegree_en_0" name="education_en[0][degree]" class="compact-input">
+                <label for="educationField_en_0">Field of Study:</label>
+                <input type="text" id="educationField_en_0" name="education_en[0][field]" class="compact-input">
+                <label for="educationInstitution_en_0">Institution:</label>
+                <input type="text" id="educationInstitution_en_0" name="education_en[0][institution]" class="compact-input">
+            </div>
+            <button type="button" onclick="addEducation('en')">Add Education (EN)</button>
+        </fieldset>
+    
+        <button type="submit">Сгенерировать резюме</button>
+    </form>
+    
+    
+    <script>
+        // Сохраняем текущие данные перед переключением языка
+        function saveFormData() {
+            let formData = new FormData(document.getElementById('resumeForm'));
+            formData.forEach((value, key) => {
+                sessionStorage.setItem(key, value);
+            });
+        }
+
+        // Восстанавливаем данные после переключения языка
+        function restoreFormData() {
+            let formElements = document.getElementById('resumeForm').elements;
+            for (let key in sessionStorage) {
+                if (sessionStorage.hasOwnProperty(key) && formElements[key]) {
+                    formElements[key].value = sessionStorage.getItem(key);
+                }
+            }
+        }
+
+        // Переключение между языковыми формами
+        function switchLanguage(lang) {
+            saveFormData();
+            document.getElementById('ruForm').style.display = (lang === 'ru') ? 'block' : 'none';
+            document.getElementById('enForm').style.display = (lang === 'en') ? 'block' : 'none';
+            document.getElementById('skillsSection').style.display = (lang === 'ru') ? 'block' : 'none';
+            document.getElementById('skillsSectionEn').style.display = (lang === 'en') ? 'block' : 'none';
+            document.getElementById('experienceSection').style.display = (lang === 'ru') ? 'block' : 'none';
+            document.getElementById('experienceSectionEn').style.display = (lang === 'en') ? 'block' : 'none';
+            document.getElementById('educationSection').style.display = (lang === 'ru') ? 'block' : 'none';
+            document.getElementById('educationSectionEn').style.display = (lang === 'en') ? 'block' : 'none';
+            restoreFormData();
+        }
+
+        // Функция добавления новых навыков
+        function addSkill(lang) {
+            let skillsSection = (lang === 'ru') ? document.getElementById('skillsSection') : document.getElementById('skillsSectionEn');
+            let skillCount = skillsSection.querySelectorAll('.skill').length;
+
+            let newSkill = document.createElement('div');
+            newSkill.classList.add('skill');
+            newSkill.innerHTML = `
+                <label for="skillName_${lang}_${skillCount}">Название навыка:</label>
+                <input type="text" id="skillName_${lang}_${skillCount}" name="skills_${lang}[${skillCount}][name]" class="compact-input">
+                <label for="skillLevel_${lang}_${skillCount}">Уровень (0-100):</label>
+                <input type="number" id="skillLevel_${lang}_${skillCount}" name="skills_${lang}[${skillCount}][level]" class="compact-input">
+            `;
+            skillsSection.insertBefore(newSkill, skillsSection.lastElementChild);
+        }
+        // Функция добавления нового опыта
+        function addExperience(lang) {
+            let experienceSection = (lang === 'ru') ? document.getElementById('experienceSection') : document.getElementById('experienceSectionEn');
+            let experienceCount = experienceSection.querySelectorAll('.experience').length;
+
+            let newExperience = document.createElement('div');
+            newExperience.classList.add('experience');
+            newExperience.innerHTML = `
+                <label for="experienceDate_${lang}_${experienceCount}">${lang === 'ru' ? 'Период:' : 'Work Period:'}</label>
+                <input type="text" id="experienceDate_${lang}_${experienceCount}" name="experience_${lang}[${experienceCount}][date]" class="compact-input">
+                <label for="experienceCompany_${lang}_${experienceCount}">${lang === 'ru' ? 'Компания:' : 'Company:'}</label>
+                <input type="text" id="experienceCompany_${lang}_${experienceCount}" name="experience_${lang}[${experienceCount}][company]" class="compact-input">
+                <label for="experiencePosition_${lang}_${experienceCount}">${lang === 'ru' ? 'Должность:' : 'Position:'}</label>
+                <input type="text" id="experiencePosition_${lang}_${experienceCount}" name="experience_${lang}[${experienceCount}][position]" class="compact-input">
+                <label for="experienceDescription_${lang}_${experienceCount}">${lang === 'ru' ? 'Описание:' : 'Description:'}</label>
+                <textarea id="experienceDescription_${lang}_${experienceCount}" name="experience_${lang}[${experienceCount}][description]" class="compact-textarea"></textarea>
+            `;
+            experienceSection.insertBefore(newExperience, experienceSection.lastElementChild);
+        }
+
+        // Функция добавления нового образования
+        function addEducation(lang) {
+            let educationSection = (lang === 'ru') ? document.getElementById('educationSection') : document.getElementById('educationSectionEn');
+            let educationCount = educationSection.querySelectorAll('.education').length;
+
+            let newEducation = document.createElement('div');
+            newEducation.classList.add('education');
+            newEducation.innerHTML = `
+                <label for="educationDate_${lang}_${educationCount}">${lang === 'ru' ? 'Период:' : 'Education Period:'}</label>
+                <input type="text" id="educationDate_${lang}_${educationCount}" name="education_${lang}[${educationCount}][date]" class="compact-input">
+                <label for="educationDegree_${lang}_${educationCount}">${lang === 'ru' ? 'Степень:' : 'Degree:'}</label>
+                <input type="text" id="educationDegree_${lang}_${educationCount}" name="education_${lang}[${educationCount}][degree]" class="compact-input">
+                <label for="educationField_${lang}_${educationCount}">${lang === 'ru' ? 'Специальность:' : 'Field of Study:'}</label>
+                <input type="text" id="educationField_${lang}_${educationCount}" name="education_${lang}[${educationCount}][field]" class="compact-input">
+                <label for="educationInstitution_${lang}_${educationCount}">${lang === 'ru' ? 'Учебное заведение:' : 'Institution:'}</label>
+                <input type="text" id="educationInstitution_${lang}_${educationCount}" name="education_${lang}[${educationCount}][institution]" class="compact-input">
+            `;
+            educationSection.insertBefore(newEducation, educationSection.lastElementChild);
+        }
+
+
+
+        // Создаем userId только один раз
+        let userId = localStorage.getItem('userId');
+        if (!userId) {
+            userId = `user_${Date.now()}`;
+            localStorage.setItem('userId', userId);
+        }
+    
+        document.getElementById('resumeForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Останавливаем стандартное поведение формы
+    
+            // Собираем данные формы
+            let formData = new FormData(event.target);
+            let ruData = {
+                name: "",
+                position: "",
+                age: "",
+                email: "",
+                phone: "",
+                location: "",
+                about: "",
+                skills: [],
+                experience: [],
+                education: [],
+                references: [],
+                socialLinks: {
+                    telegram: "",
+                    linkedin: ""
+                },
+                sections: {
+                    about: "Обо мне",
+                    basicInformation: "Основная информация",
+                    skills: "Профессиональные навыки",
+                    experience: "Опыт работы",
+                    education: "Образование",
+                    references: "Рекомендации",
+                    contact: "Связаться со мной"
+                },
+                menuItems: {
+                    aboutTitle: "Обо мне",
+                    skillsTitle: "Навыки",
+                    portfolioTitle: "Портфолио",
+                    experienceTitle: "Опыт",
+                    educationTitle: "Образование",
+                    referencesTitle: "Рекомендации",
+                    contactTitle: "Контакты"
+                }
+            };
+            let enData = {
+                name: "",
+                position: "",
+                age: "",
+                email: "",
+                phone: "",
+                location: "",
+                about: "",
+                skills: [],
+                experience: [],
+                education: [],
+                references: [],
+                socialLinks: {
+                    telegram: "",
+                    linkedin: ""
+                },
+                sections: {
+                    about: "About Me",
+                    basicInformation: "Basic Information",
+                    skills: "Professional Skills",
+                    experience: "Work Experience",
+                    education: "Education",
+                    references: "References",
+                    contact: "Contact Me"
+                },
+                menuItems: {
+                    aboutTitle: "About",
+                    skillsTitle: "Skills",
+                    portfolioTitle: "Portfolio",
+                    experienceTitle: "Experience",
+                    educationTitle: "Education",
+                    referencesTitle: "References",
+                    contactTitle: "Contact"
+                }
+            };
+    
+            formData.forEach((value, key) => {
+                if (key.includes('_ru')) {
+                    let cleanKey = key.replace('_ru', '');
+                    if (cleanKey.startsWith('skills[')) {
+                        let index = parseInt(cleanKey.match(/\d+/)[0]);
+                        if (!ruData.skills[index]) {
+                            ruData.skills[index] = {};
+                        }
+                        if (cleanKey.includes('[name]')) {
+                            ruData.skills[index].name = value;
+                        } else if (cleanKey.includes('[level]')) {
+                            ruData.skills[index].level = parseInt(value);
+                        }
+                    } else if (cleanKey.startsWith('experience[')) {
+                        let index = parseInt(cleanKey.match(/\d+/)[0]);
+                        if (!ruData.experience[index]) {
+                            ruData.experience[index] = {};
+                        }
+                        if (cleanKey.includes('[date]')) {
+                            ruData.experience[index].date = value;
+                        } else if (cleanKey.includes('[company]')) {
+                            ruData.experience[index].company = value;
+                        } else if (cleanKey.includes('[position]')) {
+                            ruData.experience[index].position = value;
+                        } else if (cleanKey.includes('[description]')) {
+                            ruData.experience[index].description = value.split('\n');
+                        }
+                    } else if (cleanKey.startsWith('education[')) {
+                        let index = parseInt(cleanKey.match(/\d+/)[0]);
+                        if (!ruData.education[index]) {
+                            ruData.education[index] = {};
+                        }
+                        if (cleanKey.includes('[date]')) {
+                            ruData.education[index].date = value;
+                        } else if (cleanKey.includes('[degree]')) {
+                            ruData.education[index].degree = value;
+                        } else if (cleanKey.includes('[field]')) {
+                            ruData.education[index].field = value;
+                        } else if (cleanKey.includes('[institution]')) {
+                            ruData.education[index].institution = value;
+                        }
+                    } else if (cleanKey.startsWith('socialLinks[')) {
+                        let linkType = cleanKey.match(/\[(.+)\]/)[1];
+                        ruData.socialLinks[linkType] = value;
+                    } else {
+                        ruData[cleanKey] = value;
+                    }
+                } else if (key.includes('_en')) {
+                    let cleanKey = key.replace('_en', '');
+                    if (cleanKey.startsWith('skills[')) {
+                        let index = parseInt(cleanKey.match(/\d+/)[0]);
+                        if (!enData.skills[index]) {
+                            enData.skills[index] = {};
+                        }
+                        if (cleanKey.includes('[name]')) {
+                            enData.skills[index].name = value;
+                        } else if (cleanKey.includes('[level]')) {
+                            enData.skills[index].level = parseInt(value);
+                        }
+                    } else if (cleanKey.startsWith('experience[')) {
+                        let index = parseInt(cleanKey.match(/\d+/)[0]);
+                        if (!enData.experience[index]) {
+                            enData.experience[index] = {};
+                        }
+                        if (cleanKey.includes('[date]')) {
+                            enData.experience[index].date = value;
+                        } else if (cleanKey.includes('[company]')) {
+                            enData.experience[index].company = value;
+                        } else if (cleanKey.includes('[position]')) {
+                            enData.experience[index].position = value;
+                        } else if (cleanKey.includes('[description]')) {
+                            enData.experience[index].description = value.split('\n');
+                        }
+                    } else if (cleanKey.startsWith('education[')) {
+                        let index = parseInt(cleanKey.match(/\d+/)[0]);
+                        if (!enData.education[index]) {
+                            enData.education[index] = {};
+                        }
+                        if (cleanKey.includes('[date]')) {
+                            enData.education[index].date = value;
+                        } else if (cleanKey.includes('[degree]')) {
+                            enData.education[index].degree = value;
+                        } else if (cleanKey.includes('[field]')) {
+                            enData.education[index].field = value;
+                        } else if (cleanKey.includes('[institution]')) {
+                            enData.education[index].institution = value;
+                        }
+                    } else if (cleanKey.startsWith('socialLinks[')) {
+                        let linkType = cleanKey.match(/\[(.+)\]/)[1];
+                        enData.socialLinks[linkType] = value;
+                    } else {
+                        enData[cleanKey] = value;
+                    }
+                }
+            });
+    
+            // Подготовка данных для отправки на сервер
+            let payload = {
+                userId: userId,
+                ruData: ruData,
+                enData: enData
+            };
+    
+            try {
+                let response = await fetch('http://localhost:3000/generate-resume', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+    
+                if (response.ok) {
+                    let data = await response.json();
+                    // Перенаправляем пользователя на созданную страницу резюме
+                    window.location.href = `${data.resumeUrl}?userId=${userId}`;
+                    console.log('Response data:', data);
+                } else {
+                    console.error('Ошибка при генерации резюме');
+                }
+            } catch (error) {
+                console.error('Ошибка при отправке данных:', error);
+            }
+        });
+    </script>
+    
+    
+    
+    
+</body>
+</html>

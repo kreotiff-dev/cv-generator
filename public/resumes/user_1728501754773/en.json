@@ -1,0 +1,56 @@
+{
+  "name": "",
+  "position": "",
+  "age": "",
+  "email": "",
+  "phone": "",
+  "location": "",
+  "about": "",
+  "skills": [
+    {
+      "name": "",
+      "level": null
+    }
+  ],
+  "experience": [
+    {
+      "date": "",
+      "company": "",
+      "position": "",
+      "description": [
+        ""
+      ]
+    }
+  ],
+  "education": [
+    {
+      "date": "",
+      "degree": "",
+      "field": "",
+      "institution": ""
+    }
+  ],
+  "references": [],
+  "socialLinks": {
+    "telegram": "",
+    "linkedin": ""
+  },
+  "sections": {
+    "about": "Обо мне",
+    "basicInformation": "Основная информация",
+    "skills": "Профессиональные навыки",
+    "experience": "Опыт работы",
+    "education": "Образование",
+    "references": "Рекомендации",
+    "contact": "Связаться со мной"
+  },
+  "menuItems": {
+    "aboutTitle": "Обо мне",
+    "skillsTitle": "Навыки",
+    "portfolioTitle": "Портфолио",
+    "experienceTitle": "Опыт",
+    "educationTitle": "Образование",
+    "referencesTitle": "Рекомендации",
+    "contactTitle": "Контакты"
+  }
+}

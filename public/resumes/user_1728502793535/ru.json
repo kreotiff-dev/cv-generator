@@ -1,0 +1,19 @@
+{
+  "name": "",
+  "position": "",
+  "age": "",
+  "email": "",
+  "phone": "",
+  "location": "",
+  "about": "",
+  "skills[0][name]": "",
+  "skills[0][level]": "",
+  "experience[0][date]": "",
+  "experience[0][company]": "",
+  "experience[0][position]": "",
+  "experience[0][description]": "",
+  "education[0][date]": "",
+  "education[0][degree]": "",
+  "education[0][field]": "",
+  "education[0][institution]": ""
+}

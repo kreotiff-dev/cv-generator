@@ -1,0 +1,59 @@
+{
+  "name": "Петр Антонов",
+  "position": "Старшой",
+  "age": "28",
+  "email": "dev.stratus@gmail.com",
+  "phone": "+79268397648",
+  "location": "Душанбе",
+  "about": "rks', Subpath: 'iframe-jam-ui', Action: '/tabStates/1382036111/injectionLifecycle.setLatestDocument()'). Either detach nodes first, or don't use objects after removing / replacing them in th",
+  "skills": [
+    {
+      "name": "Word",
+      "level": 78
+    }
+  ],
+  "experience": [
+    {
+      "date": "июнь 2021 - май 2024",
+      "company": "ООО Канитель",
+      "position": "Старшой",
+      "description": [
+        "Первый пункт",
+        "Второй пункт",
+        "Третий пункт",
+        "Четвертый пункт"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "date": "2003 - 2008",
+      "degree": "Специалист",
+      "field": "Финмен",
+      "institution": "ГУУУ"
+    }
+  ],
+  "references": [],
+  "socialLinks": {
+    "telegram": "",
+    "linkedin": ""
+  },
+  "sections": {
+    "about": "Обо мне",
+    "basicInformation": "Основная информация",
+    "skills": "Профессиональные навыки",
+    "experience": "Опыт работы",
+    "education": "Образование",
+    "references": "Рекомендации",
+    "contact": "Связаться со мной"
+  },
+  "menuItems": {
+    "aboutTitle": "Обо мне",
+    "skillsTitle": "Навыки",
+    "portfolioTitle": "Портфолио",
+    "experienceTitle": "Опыт",
+    "educationTitle": "Образование",
+    "referencesTitle": "Рекомендации",
+    "contactTitle": "Контакты"
+  }
+}
